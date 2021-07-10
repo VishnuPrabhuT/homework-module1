@@ -20,12 +20,18 @@ header {
   background-size: 1500px;
 }
 
+#cliffs header {
+  background: no-repeat lightgrey url(images/forest_cliff.jpg);
+  background-size: 1500px;
+}
+
 .main-header {
   background-color: rgb(255, 255, 255, 0.8);
   width: 700px;
   margin: 2em auto 0 auto;
   min-height: 100px;
   height: 100px;
+  opacity: 0.7;
 }
 
 .main-header .logo img {
@@ -294,4 +300,31 @@ form .button input {
   background-color: #4977d1;
   color: #fff;
   font-weight: bold;
+}
+
+.images-container {
+  margin: 0 auto;
+  width: 770px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.images-container > figure {
+  margin: 12px -21px;
+}
+
+.images-container > figure > figcaption {
+  display: table-cell;
+  vertical-align: middle;
+  font-weight: bold;
+  font-size: 12px;
+  color: white;
+  text-align: center;
+  height: 30px;
+  background-color: #9a4639;
+}
+
+.images-container > figure > * {
+  width: 300px;
 }
