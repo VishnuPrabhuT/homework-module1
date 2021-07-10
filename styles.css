@@ -284,7 +284,7 @@ form .commentbox textarea {
 }
 
 form .button {
-  width: 1005;
+  width: 100%;
 }
 
 form .button input {
