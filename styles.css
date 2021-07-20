@@ -314,7 +314,7 @@ form .commentbox textarea {
 }
 
 form .button {
-  width: 100%;
+  width: 500px;
 }
 
 form .button input {
@@ -324,6 +324,11 @@ form .button input {
   background-color: #4977d1;
   color: #fff;
   font-weight: bold;
+}
+
+form .button input:disabled {
+  pointer-events: none;
+  background-color: #333;
 }
 
 .images-container {
@@ -351,4 +356,26 @@ form .button input {
 
 .images-container > figure > * {
   width: 300px;
+}
+
+.randomcode {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.randomcode > * {
+  margin-left: 20px;
+}
+
+.randomcode input {
+  flex-basis: 30%;
+  height: 20px;
+}
+.randomcode p {
+  flex-basis: 20%;
+  padding: 10px;
+  background-color: #acacac;
+  text-align: center;
 }
