@@ -28,17 +28,20 @@ function disableButton(btnValue) {
     }
 }
 
-let codebox = document.querySelector("#codeentered");
-let codes = document.querySelector("#codes").innerText;
 
+let codebox = document.querySelector("#codeentered");
 codebox.addEventListener("input", evaluateCode);
 
 function evaluateCode() {
-    getCode = document.querySelector("#codeentered").value;
+    let codes = document.querySelector("#codes").innerText;
+    let getCode = document.querySelector("#codeentered").value;
     let charset1 = getCode.trim();
     let charset2 = codes.trim();
 
     if (charset1.length == charset2.length && charset1 == charset2) {
         disableButton(false);
+    }
+    else {
+        disableButton(true);
     }
 }
