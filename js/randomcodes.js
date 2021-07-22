@@ -14,7 +14,31 @@ function randomCodes() {
 
 document.querySelector("#codes").innerText = randomCodes();
 
-function disableButton() {
-    document.getElementById("submit").disabled = true;
+let btnValue;
+
+function disableButton(btnValue) {
+    document.getElementById("submit").disabled = btnValue;
+
+    if (btnValue == true) {
+        document.querySelector("#submit").style.backgroundColor = "rgba(73, 119, 209, 0.3)";
+        document.querySelector("#submit").style.color = "rgba(255, 255, 255, 0.5)";
+    } else {
+        document.querySelector("#submit").style.backgroundColor = "rgba(73, 119, 209, 0.1)";
+        document.querySelector("#submit").style.color = "rgba(255, 255, 255, 1)";
+    }
 }
-disableButton();
+
+let codebox = document.querySelector("#codeentered");
+let codes = document.querySelector("#codes").innerText;
+
+codebox.addEventListener("input", evaluateCode);
+
+function evaluateCode() {
+    getCode = document.querySelector("#codeentered").value;
+    let charset1 = getCode.trim();
+    let charset2 = codes.trim();
+
+    if (charset1.length == charset2.length && charset1 == charset2) {
+        disableButton(false);
+    }
+}
