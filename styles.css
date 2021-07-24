@@ -301,7 +301,7 @@ form input[type="radio"] {
 
 form select {
   width: 150px;
-  text-indent: 30%;
+  text-align: center;
 }
 
 form .commentbox label {
@@ -320,15 +320,27 @@ form .button {
 form .button input {
   width: 100px;
   margin-left: 80%;
-  padding: 5px 10px;
-  background-color: #4977d1;
-  color: #fff;
+  padding: 10px 20px;
   font-weight: bold;
+  border: none;
+  box-shadow: none;
 }
 
 form .button input:disabled {
   pointer-events: none;
-  background-color: #333;
+  background-color: rgba(73, 119, 209, 0.3);
+  color: rgba(255, 255, 255, 0.5);
+}
+
+form .button input:enabled {
+  cursor: pointer;
+  pointer-events: all;
+  background-color: rgba(73, 119, 209, 1);
+  color: rgba(255, 255, 255, 1);
+}
+
+form .button input:enabled:hover {
+  transform: scale(1.2);
 }
 
 .images-container {

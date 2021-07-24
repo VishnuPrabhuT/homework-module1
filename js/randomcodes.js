@@ -18,14 +18,6 @@ let btnValue;
 
 function disableButton(btnValue) {
     document.getElementById("submit").disabled = btnValue;
-
-    if (btnValue == true) {
-        document.querySelector("#submit").style.backgroundColor = "rgba(73, 119, 209, 0.3)";
-        document.querySelector("#submit").style.color = "rgba(255, 255, 255, 0.5)";
-    } else {
-        document.querySelector("#submit").style.backgroundColor = "rgba(73, 119, 209, 0.1)";
-        document.querySelector("#submit").style.color = "rgba(255, 255, 255, 1)";
-    }
 }
 
 
