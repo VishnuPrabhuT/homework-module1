@@ -315,15 +315,18 @@ form .commentbox textarea {
 
 form .button {
   width: 500px;
+  display: flex;
+  justify-content: flex-end;
 }
 
 form .button input {
-  width: 100px;
-  margin-left: 80%;
-  padding: 10px 20px;
+  width: max-content;
+  margin-right: 0;
+  padding: 10px 50px;
   font-weight: bold;
   border: none;
   box-shadow: none;
+  font-size: 20px;
 }
 
 form .button input:disabled {
