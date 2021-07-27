@@ -241,6 +241,18 @@ td:first-child {
   background: #bde1ff;
 }
 
+td.selected {
+  background: #88df60;
+}
+
+table tbody tr :not(td:first-child) {
+  cursor: pointer;
+}
+
+table tbody tr td.no-select {
+  cursor: not-allowed;
+}
+
 main h1 {
   color: #9ed034;
 }
