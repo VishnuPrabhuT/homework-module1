@@ -1,7 +1,18 @@
+import { state } from "./state.js";
+
 $(document).ready(function () {
     $("table tbody tr :not(td:first-child)").bind("click", function (e) {
         if (!$(e.target).text().includes("Not Available")) {
             $(e.target).toggleClass("selected");
+
+            $("#result p").remove();
+
+            state[e.target.innerText] = "";
+            state.activities.forEach(activity => {
+                $("#result").append(`<p>${activity}</p>`);
+            });
+
+            console.log(state);
         }
     });
 
@@ -16,4 +27,4 @@ $(document).ready(function () {
 //             e.target.classList.toggle("selected");
 //         })
 //     }
-// })
+// });
