@@ -7,7 +7,7 @@ const handler = {
         return Reflect.get(...arguments);
     },
     set: function (target, key) {
-        console.log("set", target, key);
+        // console.log("set", target, key);
         if (target.activities.includes(key)) {
             let ind = target.activities.indexOf(key);
             target.activities.splice(ind, 1);

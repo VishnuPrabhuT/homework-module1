@@ -409,7 +409,7 @@ form .button input:enabled:hover {
 
 #activities main #displaySelected {
   visibility: visible;
-  margin: 0 auto;
+  margin: 40px auto;
   width: 600px;
   border: 2px solid #9ed034;
   padding: 0.75em;

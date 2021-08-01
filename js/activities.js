@@ -7,12 +7,11 @@ $(document).ready(function () {
 
             $("#result p").remove();
 
-            state[e.target.innerText] = "";
+            let header = $(`table th:nth-child(${e.target.cellIndex + 1})`).text();
+            state[`${e.target.innerText} at ${header}`] = "";
             state.activities.forEach(activity => {
                 $("#result").append(`<p>${activity}</p>`);
             });
-
-            console.log(state);
         }
     });
 
