@@ -435,3 +435,7 @@ form .button input:enabled:hover {
 #activities main #displaySelected #sendinfo input[type="email"] {
   width: 200px;
 }
+
+.send-button {
+  text-align: right;
+}
